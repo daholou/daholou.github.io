@@ -11,6 +11,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload.
           Coucou, voilà du texte supplémentaire :) :S
           BOOP !
+          This should do it !
         </p>
         <a
           className="App-link"
