@@ -10,6 +10,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
           Coucou, voilà du texte supplémentaire :) :S
+          BEEP, BEEP !
           BOOP !
           This should do it !
         </p>
