@@ -1,0 +1,20 @@
+.app-header {
+  height: var(--navbar-height);
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.app-header-item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0;
+}
+
+.app-header-link {
+  margin: 0;
+  padding: 0;
+}
