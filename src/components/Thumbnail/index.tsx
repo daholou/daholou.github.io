@@ -1,5 +1,5 @@
-import Thumbnail from './Thumbnail';
+import AppThumbnail from './AppThumbnail';
 
 export {
-  Thumbnail
+  AppThumbnail
 };

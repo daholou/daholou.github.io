@@ -1,5 +1,17 @@
 {
   "main": {
     "HEADER": "Welcome to the app!"
+  },
+  "APPS": {
+    "MULTI_BLOOM": {
+      "TITLE": "Multi(×)Bloom",
+      "DESCRIPTION": "Hello",
+      "SHORT_NAME": "multi-bloom"
+    },
+    "COVID_TRACKER": {
+      "TITLE": "Covid Tracker",
+      "DESCRIPTION": "Hi :)",
+      "SHORT_NAME": "react-covid-tracker"
+    }
   }
 }
