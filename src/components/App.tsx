@@ -1,31 +1,22 @@
-import React from 'react';
-import logo from '../assets/logo.svg';
+import React, { Suspense } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../assets/base.css';
+import './base.css';
+import { AppHeader } from './AppHeader';
+import { AppContainer } from './AppContainer';
+import { useTranslation } from 'react-i18next';
 
-const App = () => {
+const App = () =>
+{
+  const { t } = useTranslation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-          Coucou, voilà du texte supplémentaire :) :S
-          BEEP, BEEP !
-          BOOP !
-          This should do it !
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={'loading...'}>
+      <div className={'App'}>
+        <AppHeader />
+        <AppContainer />
+        <h1>{t('main.HEADER')}</h1>
+      </div>
+    </Suspense>
   );
-}
+};
 
 export default App;

@@ -27,32 +27,6 @@ code {
   monospace;
 }
 
-.header-app {
-  height: var(--navbar-height);
-  z-index: 100;
-}
-
-.header-app-item {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.container-app {
-  padding-top: var(--navbar-height);
-  height: 100%;
-  margin:0;
-}
-
-.left-menu {
-  flex: 0 0 260px;
-  -ms-flex: 0 0 260px;
-}
-.item-menu {
-  padding: 10px;
-  margin: 5px;
-  max-width: 245px;
-}
-
 .App {
   text-align: center;
 }
