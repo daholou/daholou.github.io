@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import './app-container.css';
-import { AppThumbnail } from '../Thumbnail';
+import { AppThumbnail } from '../AppThumbnail';
 import { useTranslation } from 'react-i18next';
 import { imageCovidTracker, imageMultiBloom } from '../../images';
 
@@ -15,6 +15,9 @@ const AppContainer = () =>
       fluid={true}
       className={'app-container'}
     >
+      <Row>
+        <h1>{t('APP.INTRO')}</h1>
+      </Row>
       <Row className={'app-thumbnails-container'}>
         <AppThumbnail
           appTitle={t('APPS.MULTI_BLOOM.TITLE')}
