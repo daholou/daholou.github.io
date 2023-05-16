@@ -1,6 +1,13 @@
 {
-  "main": {
-    "HEADER": "Bienvenue dans l'application!"
+  "APP": {
+    "TITLE": "GitHub Pages Index",
+    "HEADER": {
+      "LANGUAGES": {
+        "TITLE": "Langage",
+        "FRENCH": "Français",
+        "ENGLISH": "Anglais"
+      }
+    }
   },
   "APPS": {
     "MULTI_BLOOM": {
