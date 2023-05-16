@@ -10,6 +10,17 @@
     },
     "INTRO": "Bienvenue dans l'application !"
   },
+  "JOB": {
+    "TITLE": "Ingénieur d'études et développement",
+    "DESCRIPTION_1": "Je crée, maintiens et améliore des logiciels et des applications informatiques.",
+    "DESCRIPTION_2": "Je traduis les besoins des utilisateurs en spécifications techniques détaillées, tout en restant à jour sur les dernières tendances technologiques.",
+    "DESCRIPTION_3": "Je peux ainsi proposer des solutions innovantes et créatives pour résoudre des problèmes complexes."
+  },
+  "PORTFOLIO": {
+    "TITLE": "Portefeuille d'applications",
+    "DESCRIPTION_1": "Voici une collection de projets web que j'ai développé avec React.",
+    "DESCRIPTION_2": "Chaque projet est hébergé sur GitHub Pages, je vous invite donc à cliquer sur l'un des liens ci-dessous pour en savoir plus."
+  },
   "APPS": {
     "GO": "Ouvrir dans un nouvel onglet",
     "MULTI_BLOOM": {
@@ -22,6 +33,10 @@
       "DESCRIPTION": "Un graphique en direct montrant de nombreuses statistiques sur la pandémie de COVID-19.",
       "SHORT_NAME": "react-covid-tracker"
     }
+  },
+  "CONTACT": {
+    "TITLE": "Me contacter",
+    "DESCRIPTION": "N'hésitez pas à me poser toutes les questions que vous pourriez avoir ou simplement à me dire bonjour."
   }
 }
 
