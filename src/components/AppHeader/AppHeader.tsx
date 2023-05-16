@@ -1,9 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import {
   imageFlagFrance,
   imageFlagUsa,
@@ -14,9 +12,56 @@ import './app-header.css';
 import { useTranslation } from 'react-i18next';
 import Container from 'react-bootstrap/Container';
 
+type Locale = {
+  key: string;
+  title: string;
+  imageFlag: any;
+}
+
+
 const AppHeader = () =>
 {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [expanded, setExpanded] = useState(false);
+
+  const locales: Locale[] = [
+    {
+      key: 'fr',
+      title: t('APP.HEADER.LANGUAGES.FRENCH'),
+      imageFlag: imageFlagFrance,
+    },
+    {
+      key: 'en',
+      title: t('APP.HEADER.LANGUAGES.ENGLISH'),
+      imageFlag: imageFlagUsa,
+    }
+  ]
+
+  const currentLocale = locales.find(locale => locale.key === i18n.resolvedLanguage);
+  const otherLocales = locales.filter(locale => locale.key !== i18n.resolvedLanguage);
+
+  const localeToJSX = (locale: Locale) => (
+    <div className={'app-dropdown-language-item'}>
+      <img
+        src={locale.imageFlag}
+        height={24}
+        alt={locale.key}
+      />
+      {locale.title}
+    </div>
+  )
+
+  const localeToNavDropdownItemJSX = (locale: Locale) => (
+    <NavDropdown.Item
+      key={locale.key}
+      onClick={() => {
+        i18n.changeLanguage(locale.key)
+          .then(() => setExpanded(false))
+      }}
+    >
+      {localeToJSX(locale)}
+    </NavDropdown.Item>
+  )
 
   return (
     <Navbar
@@ -24,82 +69,52 @@ const AppHeader = () =>
       variant={'dark'}
       className={'app-header'}
       expand={'sm'}
-      collapseOnSelect={true}
+      expanded={expanded}
     >
       <Container fluid>
         <Navbar.Brand as={'div'} className={'app-header-item'}>
-
+          {t('APP.TITLE')}
         </Navbar.Brand>
-        <Form className="d-flex">
-          <Form.Control
-            type="search"
-            placeholder="Search"
-            className="me-2"
-            aria-label="Search"
-          />
-          <Button variant="outline-success">Search</Button>
-        </Form>
-        <Navbar.Toggle aria-controls={'responsive-navbar-nav'} />
+        <Navbar.Toggle
+          aria-controls={'responsive-navbar-nav'}
+          onClick={() => setExpanded(!expanded)}
+        />
         <Navbar.Collapse id={'responsive-navbar-nav'}>
-          <Nav className={'me-auto'}>
-            <Nav.Link>
-              coucou
-            </Nav.Link>
-          </Nav>
-          <Nav>
+          <Nav className={'ms-auto app-navbar-nav'}>
             <NavDropdown
-              title={t('APP.HEADER.LANGUAGES.TITLE')}
-              id={'collasible-nav-dropdown'}
+              className={'app-dropdown-language'}
+              title={currentLocale && localeToJSX(currentLocale)}
             >
-              <NavDropdown.Item onClick={console.log}>
-                <div className={'app-dropdown-item'}>
-                  <img
-                    src={imageFlagFrance}
-                    height={24}
-                    alt={'FR'}
-                  />
-                  {t('APP.HEADER.LANGUAGES.FRENCH')}
-                </div>
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={console.log}>
-                <div className={'app-dropdown-item'}>
-                  <img
-                    src={imageFlagUsa}
-                    height={24}
-                    alt={'EN'}
-                  />
-                  {t('APP.HEADER.LANGUAGES.ENGLISH')}
-                </div>
-              </NavDropdown.Item>
+              {otherLocales.map(localeToNavDropdownItemJSX)}
             </NavDropdown>
-            <Nav.Link>
-              {`v${process.env.REACT_APP_VERSION}`}
-            </Nav.Link>
-            <Nav.Link
-              className={'app-header-link'}
-              href={'https://reactjs.org/'}
-              target={'_blank'}
-              rel={'noreferrer'}
-            >
-              <img
-                src={imageReactLogo}
-                className={'App-logo'}
-                height={36}
-                alt={'react-logo'}
-              />
-            </Nav.Link>
-            <Nav.Link
-              className={'app-header-link'}
-              href={'https://github.com/daholou/daholou.github.io'}
-              target={'_blank'}
-              rel={'noreferrer'}
-            >
-              <img
-                src={imageGithubLogo}
-                height={36}
-                alt={'github-logo'}
-              />
-            </Nav.Link>
+            <div className={'app-header-group'}>
+              <div>
+                {`v${process.env.REACT_APP_VERSION}`}
+              </div>
+              <a
+                href={'https://reactjs.org/'}
+                target={'_blank'}
+                rel={'noreferrer'}
+              >
+                <img
+                  src={imageReactLogo}
+                  className={'App-logo'}
+                  height={36}
+                  alt={'react-logo'}
+                />
+              </a>
+              <a
+                href={'https://github.com/daholou/daholou.github.io'}
+                target={'_blank'}
+                rel={'noreferrer'}
+              >
+                <img
+                  src={imageGithubLogo}
+                  height={36}
+                  alt={'github-logo'}
+                />
+              </a>
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Container>
