@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './thumbnail.css';
+import { useTranslation } from 'react-i18next';
 
 type Props = {
   appTitle: string;
@@ -16,6 +17,8 @@ const AppThumbnail = ({
   appImage
 }: Props) =>
 {
+  const { t } = useTranslation();
+
   return (
     <Card className={'thumbnail'}>
       <Card.Img
@@ -35,7 +38,7 @@ const AppThumbnail = ({
           target={'_blank'}
           rel={'noreferrer'}
         >
-          {'Go somewhere'}
+          {t('APPS.GO')}
         </Button>
       </Card.Body>
     </Card>

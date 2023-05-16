@@ -7,17 +7,19 @@
         "FRENCH": "French",
         "ENGLISH": "English (US)"
       }
-    }
+    },
+    "INTRO": "Welcome to the app !"
   },
   "APPS": {
+    "GO": "Open in new tab",
     "MULTI_BLOOM": {
       "TITLE": "Multi(×)Bloom",
-      "DESCRIPTION": "Hello",
+      "DESCRIPTION": "An interesting graphical representation of some interesting properties of multiplication tables.",
       "SHORT_NAME": "multi-bloom"
     },
     "COVID_TRACKER": {
       "TITLE": "Covid Tracker",
-      "DESCRIPTION": "Hi :)",
+      "DESCRIPTION": "A live plot showing many statistics about the COVID-19 pandemic.",
       "SHORT_NAME": "react-covid-tracker"
     }
   }
