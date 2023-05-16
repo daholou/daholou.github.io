@@ -1,16 +1,25 @@
 {
-  "main": {
-    "HEADER": "Bienvenue dans l'application!"
+  "APP": {
+    "TITLE": "Damien Aholou",
+    "HEADER": {
+      "LANGUAGES": {
+        "TITLE": "Langage",
+        "FRENCH": "Français",
+        "ENGLISH": "Anglais (US)"
+      }
+    },
+    "INTRO": "Bienvenue dans l'application !"
   },
   "APPS": {
+    "GO": "Ouvrir dans un nouvel onglet",
     "MULTI_BLOOM": {
       "TITLE": "Multi(×)Bloom",
-      "DESCRIPTION": "Coucou",
+      "DESCRIPTION": "Une représentation graphique intéressante de quelques propriétés intéressantes des tables de multiplication.",
       "SHORT_NAME": "multi-bloom"
     },
     "COVID_TRACKER": {
       "TITLE": "Covid Tracker",
-      "DESCRIPTION": "Coucou :)",
+      "DESCRIPTION": "Un graphique en direct montrant de nombreuses statistiques sur la pandémie de COVID-19.",
       "SHORT_NAME": "react-covid-tracker"
     }
   }
