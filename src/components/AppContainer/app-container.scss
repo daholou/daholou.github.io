@@ -24,15 +24,34 @@
   text-align: left;
 }
 
+.app-contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.app-contacts-button {
+  width: 17rem;
+}
+
 .app-thumbnails-container {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2rem;
   margin: 0;
 }
 
 @media (max-width: 767px) {
   .app-thumbnails-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .app-contacts {
     flex-direction: column;
     align-items: center;
   }

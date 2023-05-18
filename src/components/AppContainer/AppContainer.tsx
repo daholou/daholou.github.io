@@ -5,7 +5,16 @@ import Col from 'react-bootstrap/Col';
 import './app-container.scss';
 import { AppThumbnail } from '../AppThumbnail';
 import { useTranslation } from 'react-i18next';
-import { imageCovidTracker, imageMultiBloom } from '../../images';
+import {
+  imageCovidTracker,
+  imageGmailLogo,
+  imageLinkedinLogo,
+  imageMultiBloom
+} from '../../images';
+import Button from 'react-bootstrap/Button';
+
+const EMAIL_URL = 'mailto:damien.aholou.pro@gmail.com';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/damienaholou/';
 
 const AppContainer = () =>
 {
@@ -59,6 +68,38 @@ const AppContainer = () =>
           </h1>
           <div className={'app-paragraph'}>
             <span>{t('CONTACT.DESCRIPTION')}</span>
+          </div>
+          <div className={'app-contacts'}>
+            <Button
+              className={'app-contacts-button'}
+              size={'lg'}
+              variant={'outline-secondary'}
+              as={'a'}
+              href={EMAIL_URL}
+            >
+              <img
+                src={imageGmailLogo}
+                height={36}
+                alt={'imageGmailLogo'}
+              />
+              <div>{t('CONTACT.EMAIL')}</div>
+            </Button>
+            <Button
+              className={'app-contacts-button'}
+              size={'lg'}
+              variant={'outline-secondary'}
+              as={'a'}
+              href={LINKEDIN_URL}
+              target={'_blank'}
+              rel={'noreferrer'}
+            >
+              <img
+                src={imageLinkedinLogo}
+                height={36}
+                alt={'imageLinkedinLogo'}
+              />
+              <div>{t('CONTACT.LINKEDIN')}</div>
+            </Button>
           </div>
         </Row>
       </Col>
