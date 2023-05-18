@@ -9,7 +9,6 @@ i18nInstance
   .use(LanguageDetector)
   .init({
     debug: true,
-    lng: 'en',
     fallbackLng: 'en',
     interpolation: { escapeValue: false }
   }).then(() => {

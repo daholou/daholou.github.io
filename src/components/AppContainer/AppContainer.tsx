@@ -1,7 +1,8 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import './app-container.css';
+import Col from 'react-bootstrap/Col';
+import './app-container.scss';
 import { AppThumbnail } from '../AppThumbnail';
 import { useTranslation } from 'react-i18next';
 import { imageCovidTracker, imageMultiBloom } from '../../images';
@@ -15,23 +16,52 @@ const AppContainer = () =>
       fluid={true}
       className={'app-container'}
     >
-      <Row>
-        <h1>{t('APP.INTRO')}</h1>
-      </Row>
-      <Row className={'app-thumbnails-container'}>
-        <AppThumbnail
-          appTitle={t('APPS.MULTI_BLOOM.TITLE')}
-          appDescription={t('APPS.MULTI_BLOOM.DESCRIPTION')}
-          appShortName={t('APPS.MULTI_BLOOM.SHORT_NAME')}
-          appImage={imageMultiBloom}
-        />
-        <AppThumbnail
-          appTitle={t('APPS.COVID_TRACKER.TITLE')}
-          appDescription={t('APPS.COVID_TRACKER.DESCRIPTION')}
-          appShortName={t('APPS.COVID_TRACKER.SHORT_NAME')}
-          appImage={imageCovidTracker}
-        />
-      </Row>
+      <Col className={'app-col-container'}>
+        <Row className={'app-row-container'}>
+          <h1>
+            {t('JOB.TITLE')}
+          </h1>
+          <div className={'app-paragraph'}>
+            <span>{t('JOB.DESCRIPTION_1')}</span>
+            <br/>
+            <span>{t('JOB.DESCRIPTION_2')}</span>
+            <br/>
+            <span>{t('JOB.DESCRIPTION_3')}</span>
+          </div>
+        </Row>
+        <Row className={'app-row-container'}>
+          <h1>
+            {t('PORTFOLIO.TITLE')}
+          </h1>
+          <div className={'app-paragraph'}>
+            <span>{t('PORTFOLIO.DESCRIPTION_1')}</span>
+            <br/>
+            <span>{t('PORTFOLIO.DESCRIPTION_2')}</span>
+          </div>
+        </Row>
+        <div className={'app-thumbnails-container'}>
+          <AppThumbnail
+            appTitle={t('APPS.MULTI_BLOOM.TITLE')}
+            appDescription={t('APPS.MULTI_BLOOM.DESCRIPTION')}
+            appShortName={t('APPS.MULTI_BLOOM.SHORT_NAME')}
+            appImage={imageMultiBloom}
+          />
+          <AppThumbnail
+            appTitle={t('APPS.COVID_TRACKER.TITLE')}
+            appDescription={t('APPS.COVID_TRACKER.DESCRIPTION')}
+            appShortName={t('APPS.COVID_TRACKER.SHORT_NAME')}
+            appImage={imageCovidTracker}
+          />
+        </div>
+        <Row className={'app-row-container'}>
+          <h1>
+            {t('CONTACT.TITLE')}
+          </h1>
+          <div className={'app-paragraph'}>
+            <span>{t('CONTACT.DESCRIPTION')}</span>
+          </div>
+        </Row>
+      </Col>
     </Container>
   );
 };
