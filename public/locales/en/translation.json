@@ -17,20 +17,21 @@
     "DESCRIPTION_3": "I can therefore propose innovative and creative solutions to solve complex problems."
   },
   "PORTFOLIO": {
-    "TITLE": "Application portfolio",
+    "TITLE": "Application Portfolio",
     "DESCRIPTION_1": "Here is a collection of web projects that I have developed using React.",
-    "DESCRIPTION_2": "Each project is hosted on GitHub Pages, so I invite you to click on one of the links below to learn more."
+    "DESCRIPTION_2": "Each project is hosted on its own GitHub Page! Feel free to click on any of the links below for a closer look."
   },
   "APPS": {
     "GO": "Open in new tab",
     "MULTI_BLOOM": {
       "TITLE": "Multi(×)Bloom",
-      "DESCRIPTION": "An interesting graphical representation of some interesting properties of multiplication tables.",
+      "DESCRIPTION": "An interesting graphical representation of some remarkable properties of multiplication tables.",
       "SHORT_NAME": "multi-bloom"
     },
     "COVID_TRACKER": {
       "TITLE": "Covid Tracker",
-      "DESCRIPTION": "A live plot showing many statistics about the COVID-19 pandemic.",
+      "DESCRIPTION":
+      "A \"real-time\" graph displaying a wide range of statistics on the COVID-19 pandemic.",
       "SHORT_NAME": "react-covid-tracker"
     }
   },

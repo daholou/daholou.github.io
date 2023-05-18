@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './app-container.css';
+import './app-container.scss';
 import { AppThumbnail } from '../AppThumbnail';
 import { useTranslation } from 'react-i18next';
 import { imageCovidTracker, imageMultiBloom } from '../../images';

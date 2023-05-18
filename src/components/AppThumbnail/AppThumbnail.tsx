@@ -1,7 +1,7 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import './thumbnail.css';
+import './thumbnail.scss';
 import { useTranslation } from 'react-i18next';
+import Button from 'react-bootstrap/Button';
 
 type Props = {
   appTitle: string;
@@ -20,28 +20,37 @@ const AppThumbnail = ({
   const { t } = useTranslation();
 
   return (
-    <Card className={'thumbnail'}>
-      <Card.Img
-        variant={'top'}
-        src={appImage}
-      />
-      <Card.Body>
-        <Card.Title>
-          {appTitle}
-        </Card.Title>
-        <Card.Text>
-          {appDescription}
-        </Card.Text>
-        <Button
-          variant={'primary'}
-          href={`https://daholou.github.io/${appShortName}`}
-          target={'_blank'}
-          rel={'noreferrer'}
-        >
-          {t('APPS.GO')}
-        </Button>
-      </Card.Body>
-    </Card>
+    <a
+      href={`https://daholou.github.io/${appShortName}`}
+      target={'_blank'}
+      rel={'noreferrer'}
+      style={{ textDecoration: 'none', color: 'inherit' }}
+    >
+      <Card
+        className={'thumbnail-card'}
+      >
+        <Card.Img
+          className={'thumbnail-card-img'}
+          variant={'top'}
+          src={appImage}
+        />
+        <Card.Header className={'thumbnail-card-header'}>
+          <Card.Title className={'thumbnail-card-title'}>
+            {appTitle}
+          </Card.Title>
+        </Card.Header>
+        <Card.Body>
+          <Card.Text className={'thumbnail-card-text'}>
+            {appDescription}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <Button variant={'success'} className={'thumbnail-card-button'}>
+            {t('APPS.GO')}
+          </Button>
+        </Card.Footer>
+      </Card>
+    </a>
   );
 };
 

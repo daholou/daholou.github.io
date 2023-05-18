@@ -14,6 +14,10 @@
 .app-row-container {
   gap: 1rem;
   margin: 0;
+  border-top: solid #577e9f 2px;
+  &:last-of-type {
+    padding-bottom: 4rem;
+  }
 }
 
 .app-paragraph {
