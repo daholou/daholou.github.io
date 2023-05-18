@@ -10,18 +10,33 @@
     },
     "INTRO": "Bienvenue dans l'application !"
   },
+  "JOB": {
+    "TITLE": "Ingénieur d'Études et Développement",
+    "DESCRIPTION_1": "Je crée, maintiens et améliore des logiciels et des applications informatiques.",
+    "DESCRIPTION_2": "Je traduis les besoins des utilisateurs en spécifications techniques détaillées, tout en restant à jour sur les dernières tendances technologiques.",
+    "DESCRIPTION_3": "Je peux ainsi proposer des solutions innovantes et créatives pour résoudre des problèmes complexes."
+  },
+  "PORTFOLIO": {
+    "TITLE": "Portefeuille d'applications",
+    "DESCRIPTION_1": "Voici une collection de projets web que j'ai développé avec React.",
+    "DESCRIPTION_2": "Chaque projet est hébergé sur sa propre Page GitHub! N'hésitez pas à explorer davantage en cliquant sur l'un des liens ci-dessous."
+  },
   "APPS": {
     "GO": "Ouvrir dans un nouvel onglet",
     "MULTI_BLOOM": {
       "TITLE": "Multi(×)Bloom",
-      "DESCRIPTION": "Une représentation graphique intéressante de quelques propriétés intéressantes des tables de multiplication.",
+      "DESCRIPTION": "Une représentation graphique intéressante de quelques propriétés remarquables des tables de multiplication.",
       "SHORT_NAME": "multi-bloom"
     },
     "COVID_TRACKER": {
       "TITLE": "Covid Tracker",
-      "DESCRIPTION": "Un graphique en direct montrant de nombreuses statistiques sur la pandémie de COVID-19.",
+      "DESCRIPTION": "Un graphique en \"temps réel\" qui présente un large éventail de statistiques sur la pandémie de COVID-19.",
       "SHORT_NAME": "react-covid-tracker"
     }
+  },
+  "CONTACT": {
+    "TITLE": "Me contacter",
+    "DESCRIPTION": "N'hésitez pas à me poser toutes les questions que vous pourriez avoir ou simplement à me dire bonjour."
   }
 }
 

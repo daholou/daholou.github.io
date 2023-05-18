@@ -10,17 +10,33 @@
     },
     "INTRO": "Welcome to the app !"
   },
+  "JOB": {
+    "TITLE": "Research and Development Engineer",
+    "DESCRIPTION_1": "I create, maintain, and enhance software and computer applications.",
+    "DESCRIPTION_2": "I translate user needs into detailed technical specifications while staying up to date with the latest technological trends.",
+    "DESCRIPTION_3": "I can therefore propose innovative and creative solutions to solve complex problems."
+  },
+  "PORTFOLIO": {
+    "TITLE": "Application Portfolio",
+    "DESCRIPTION_1": "Here is a collection of web projects that I have developed using React.",
+    "DESCRIPTION_2": "Each project is hosted on its own GitHub Page! Feel free to click on any of the links below for a closer look."
+  },
   "APPS": {
     "GO": "Open in new tab",
     "MULTI_BLOOM": {
       "TITLE": "Multi(×)Bloom",
-      "DESCRIPTION": "An interesting graphical representation of some interesting properties of multiplication tables.",
+      "DESCRIPTION": "An interesting graphical representation of some remarkable properties of multiplication tables.",
       "SHORT_NAME": "multi-bloom"
     },
     "COVID_TRACKER": {
       "TITLE": "Covid Tracker",
-      "DESCRIPTION": "A live plot showing many statistics about the COVID-19 pandemic.",
+      "DESCRIPTION":
+      "A \"real-time\" graph displaying a wide range of statistics on the COVID-19 pandemic.",
       "SHORT_NAME": "react-covid-tracker"
     }
+  },
+  "CONTACT": {
+    "TITLE": "Contact me",
+    "DESCRIPTION": "Feel free to ask me any questions you may have or simply to say hello."
   }
 }
