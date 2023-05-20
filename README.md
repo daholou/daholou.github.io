@@ -1,3 +1,12 @@
+# Deployment to main branch
+- add features on develop branch
+- merge `main` into `develop` (from `develop` run: `git merge main`)
+- resolve any conflicts
+- merge `develop` into `main`:
+  + `git checkout main`
+  + `git merge --no-ff develop`
+  + `git push`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
