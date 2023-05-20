@@ -36,7 +36,9 @@
   },
   "CONTACT": {
     "TITLE": "Me contacter",
-    "DESCRIPTION": "N'hésitez pas à me poser toutes les questions que vous pourriez avoir ou simplement à me dire bonjour."
+    "DESCRIPTION": "N'hésitez pas à me poser toutes les questions que vous pourriez avoir ou simplement à me dire bonjour.",
+    "EMAIL": "M'envoyer un email",
+    "LINKEDIN": "Me contacter sur LinkedIn"
   }
 }
 

@@ -30,13 +30,14 @@
     },
     "COVID_TRACKER": {
       "TITLE": "Covid Tracker",
-      "DESCRIPTION":
-      "A \"real-time\" graph displaying a wide range of statistics on the COVID-19 pandemic.",
+      "DESCRIPTION": "A \"real-time\" graph displaying a wide range of statistics on the COVID-19 pandemic.",
       "SHORT_NAME": "react-covid-tracker"
     }
   },
   "CONTACT": {
     "TITLE": "Contact me",
-    "DESCRIPTION": "Feel free to ask me any questions you may have or simply to say hello."
+    "DESCRIPTION": "Feel free to ask me any questions you may have or simply to say hello.",
+    "EMAIL": "Send me an email",
+    "LINKEDIN": "Contact me on LinkedIn"
   }
 }

@@ -7,8 +7,8 @@ import {
   imageFlagUsa,
   imageGithubLogo,
   imageReactLogo
-} from '../../images';
-import './app-header.css';
+} from '@@/images';
+import './app-header.scss';
 import { useTranslation } from 'react-i18next';
 import Container from 'react-bootstrap/Container';
 

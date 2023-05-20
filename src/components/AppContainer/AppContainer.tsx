@@ -3,9 +3,22 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './app-container.scss';
-import { AppThumbnail } from '../AppThumbnail';
+import { AppThumbnail } from '@@/components/AppThumbnail';
 import { useTranslation } from 'react-i18next';
-import { imageCovidTracker, imageMultiBloom } from '../../images';
+import {
+  imageCovidTracker,
+  imageGmailLogo,
+  imageLinkedinLogo,
+  imageMultiBloom
+} from '@@/images';
+import Button from 'react-bootstrap/Button';
+import {
+  EMAIL_URL,
+  HREF_CONTACT,
+  HREF_PORTFOLIO,
+  HREF_TOP,
+  LINKEDIN_URL
+} from '@@/constants';
 
 const AppContainer = () =>
 {
@@ -17,7 +30,7 @@ const AppContainer = () =>
       className={'app-container'}
     >
       <Col className={'app-col-container'}>
-        <Row className={'app-row-container'}>
+        <Row className={'app-row-container'} id={HREF_TOP}>
           <h1>
             {t('JOB.TITLE')}
           </h1>
@@ -29,7 +42,7 @@ const AppContainer = () =>
             <span>{t('JOB.DESCRIPTION_3')}</span>
           </div>
         </Row>
-        <Row className={'app-row-container'}>
+        <Row className={'app-row-container'} id={HREF_PORTFOLIO}>
           <h1>
             {t('PORTFOLIO.TITLE')}
           </h1>
@@ -53,12 +66,44 @@ const AppContainer = () =>
             appImage={imageCovidTracker}
           />
         </div>
-        <Row className={'app-row-container'}>
+        <Row className={'app-row-container'} id={HREF_CONTACT}>
           <h1>
             {t('CONTACT.TITLE')}
           </h1>
           <div className={'app-paragraph'}>
             <span>{t('CONTACT.DESCRIPTION')}</span>
+          </div>
+          <div className={'app-contacts'}>
+            <Button
+              className={'app-contacts-button'}
+              size={'lg'}
+              variant={'outline-secondary'}
+              as={'a'}
+              href={EMAIL_URL}
+            >
+              <img
+                src={imageGmailLogo}
+                height={36}
+                alt={'imageGmailLogo'}
+              />
+              <div>{t('CONTACT.EMAIL')}</div>
+            </Button>
+            <Button
+              className={'app-contacts-button'}
+              size={'lg'}
+              variant={'outline-secondary'}
+              as={'a'}
+              href={LINKEDIN_URL}
+              target={'_blank'}
+              rel={'noreferrer'}
+            >
+              <img
+                src={imageLinkedinLogo}
+                height={36}
+                alt={'imageLinkedinLogo'}
+              />
+              <div>{t('CONTACT.LINKEDIN')}</div>
+            </Button>
           </div>
         </Row>
       </Col>
