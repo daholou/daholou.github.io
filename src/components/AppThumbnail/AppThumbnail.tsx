@@ -2,6 +2,7 @@ import Card from 'react-bootstrap/Card';
 import './thumbnail.scss';
 import { useTranslation } from 'react-i18next';
 import Button from 'react-bootstrap/Button';
+import { DAHOLOU_APP_URL } from '@@/constants';
 
 type Props = {
   appTitle: string;
@@ -21,7 +22,7 @@ const AppThumbnail = ({
 
   return (
     <a
-      href={`https://daholou.github.io/${appShortName}`}
+      href={DAHOLOU_APP_URL(appShortName)}
       target={'_blank'}
       rel={'noreferrer'}
       style={{ textDecoration: 'none', color: 'inherit' }}
