@@ -11,7 +11,7 @@ import {
 import './app-header.scss';
 import { useTranslation } from 'react-i18next';
 import Container from 'react-bootstrap/Container';
-import { DAHOLOU_URL, REACT_URL } from '@@/constants';
+import { PROJECT_URL, REACT_URL } from '@@/constants';
 
 type Locale = {
   key: string;
@@ -105,7 +105,7 @@ const AppHeader = () =>
                 />
               </a>
               <a
-                href={DAHOLOU_URL}
+                href={PROJECT_URL}
                 target={'_blank'}
                 rel={'noreferrer'}
               >
