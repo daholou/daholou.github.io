@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './base.css';
-import { AppHeader } from './AppHeader';
-import { AppContainer } from './AppContainer';
+import './base.scss';
+import { AppHeader } from '@@/components/AppHeader';
+import { AppContainer } from '@@/components/AppContainer';
 
 const App = () =>
 {

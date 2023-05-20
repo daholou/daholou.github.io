@@ -3,18 +3,22 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './app-container.scss';
-import { AppThumbnail } from '../AppThumbnail';
+import { AppThumbnail } from '@@/components/AppThumbnail';
 import { useTranslation } from 'react-i18next';
 import {
   imageCovidTracker,
   imageGmailLogo,
   imageLinkedinLogo,
   imageMultiBloom
-} from '../../images';
+} from '@@/images';
 import Button from 'react-bootstrap/Button';
-
-const EMAIL_URL = 'mailto:damien.aholou.pro@gmail.com';
-const LINKEDIN_URL = 'https://www.linkedin.com/in/damienaholou/';
+import {
+  EMAIL_URL,
+  HREF_CONTACT,
+  HREF_PORTFOLIO,
+  HREF_TOP,
+  LINKEDIN_URL
+} from '@@/constants';
 
 const AppContainer = () =>
 {
@@ -26,7 +30,7 @@ const AppContainer = () =>
       className={'app-container'}
     >
       <Col className={'app-col-container'}>
-        <Row className={'app-row-container'}>
+        <Row className={'app-row-container'} id={HREF_TOP}>
           <h1>
             {t('JOB.TITLE')}
           </h1>
@@ -38,7 +42,7 @@ const AppContainer = () =>
             <span>{t('JOB.DESCRIPTION_3')}</span>
           </div>
         </Row>
-        <Row className={'app-row-container'}>
+        <Row className={'app-row-container'} id={HREF_PORTFOLIO}>
           <h1>
             {t('PORTFOLIO.TITLE')}
           </h1>
@@ -62,7 +66,7 @@ const AppContainer = () =>
             appImage={imageCovidTracker}
           />
         </div>
-        <Row className={'app-row-container'}>
+        <Row className={'app-row-container'} id={HREF_CONTACT}>
           <h1>
             {t('CONTACT.TITLE')}
           </h1>

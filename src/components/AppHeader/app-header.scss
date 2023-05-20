@@ -20,8 +20,11 @@
   align-items: center;
 }
 
-.app-dropdown-language > .dropdown-toggle::after {
-  display: none;
+.app-dropdown-language {
+  width: 9rem;
+  & > .dropdown-toggle::after {
+    display: none;
+  }
 }
 
 .app-dropdown-language-item {
